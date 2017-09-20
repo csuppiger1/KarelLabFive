@@ -23,7 +23,21 @@ public class DoubleBot extends Robot
 
     public void doubleBeepers()
     {
-        // put your code here
+        move();
+        int beepers = 0;
+        while(nextToABeeper()) {
+            pickBeeper();
+            beepers++;
+        }
+        int i;
+        for(i = 0; i <= beepers; i++) {
+            putBeeper();
+        }
+        move();
+        for(i = 0; i <= (beepers*2)+1; i++) {
+            putBeeper();
+        }
+        move();
         
     }
 }
